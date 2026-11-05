@@ -209,6 +209,13 @@ main > h1 {
   color: var(--muted);
 }
 
+.prose img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+}
+
 .site-footer {
   margin-top: 3rem;
   padding-top: 1rem;
