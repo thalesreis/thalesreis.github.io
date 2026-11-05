@@ -1,0 +1,22 @@
+---
+layout: base.njk
+title: Thales Reis
+description: Notes from Thales Reis.
+---
+<p class="lede">Notes on software, and whatever else I decide to write down.</p>
+
+{% if collections.posts.length %}
+<ol class="post-list">
+  {% for post in collections.posts | reverse %}
+  <li>
+    <time datetime="{{ post.date | htmlDate }}">{{ post.date | readableDate }}</time>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    {% if post.data.description %}
+    <p>{{ post.data.description }}</p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p class="empty">No posts yet.</p>
+{% endif %}
